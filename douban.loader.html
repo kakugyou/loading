@@ -1,0 +1,23 @@
+<style type="text/css">
+
+*{
+	box-sizing:border-box;
+}
+@-webkit-keyframes toggleOpacity{
+	0%{opacity:1}
+	40%{opacity:.7}
+	75%{opacity:.9}
+	to{opacity:1}
+	}
+	@keyframes toggleOpacity{0%{opacity:1}40%{opacity:.7}75%{opacity:.9}to{opacity:1}}
+
+	@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes rotate{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}
+
+	.loader{width:30px;height:30px;display:block}
+
+	.loader div{height:100%;border-radius:50%;padding:2px;border:1px solid transparent;-webkit-animation:rotate cubic-bezier(.2,0,.58,1) 4s infinite,toggleOpacity linear 1s infinite;animation:rotate cubic-bezier(.2,0,.58,1) 4s infinite,toggleOpacity linear 1s infinite;border-top-color:rgba(0,0,0,.7);border-bottom-color:rgba(0,0,0,.6)}
+	.loader div:hover{-webkit-animation-play-state:paused;animation-play-state:paused}
+	.loader.center{position:absolute;left:50%;top:50%;margin-left:-15px;margin-top:-15px}
+</style>
+
+<div class="loader center center"><div class="c-1"><div class="c-2"><div class="c-3"></div></div></div></div>
